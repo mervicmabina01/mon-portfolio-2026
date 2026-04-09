@@ -215,4 +215,194 @@ footer a:hover {
     color: var(--orange-vif);
     transform: translateY(-3px);
 }
+.projets {
+    padding: 4rem 2rem;
+}
 
+.grid-projets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    color: var(--violet-doux);
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.tags {
+    margin-bottom: 1rem;
+}
+
+.tags span {
+    display: inline-block;
+    background-color: var(--gris-clair);
+    color: var(--gris-tres-fonce);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.card-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--gris-clair);
+    padding-top: 1rem;
+}
+
+.card-links a {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.card-links a:hover {
+    color: var(--violet-doux);
+}
+
+.soon {
+    font-size: 0.9rem;
+    color: var(--gris-fonce);
+}
+/* --- Styles pour la page Contact --- */
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-form-container, .contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Style du titre H1 pour qu'il soit centré */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Formulaire */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Important pour que le padding n'agrandisse pas l'input */
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: var(--violet-doux); /* Couleur sobre pour s'accorder au portfolio */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #555;
+}
+
+/* Liens directs (WhatsApp/Instagram) */
+.contact-info h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.link-item:hover {
+    transform: scale(1.02);
+    background: #ececec;
+}
+
+.link-item .icon {
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.whatsapp:hover {
+    border-left: 4px solid #25D366;
+}
+
+.instagram:hover {
+    border-left: 4px solid #E1306C;
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+}
+.b{
+    color: #534EDD;
+}
+.a{
+    position: relative;
+    color:var(--violet-doux)
+    
+}
