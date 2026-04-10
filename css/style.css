@@ -215,22 +215,145 @@ footer a:hover {
     color: var(--orange-vif);
     transform: translateY(-3px);
 }
-.projets {
-    padding: 4rem 2rem;
+
+/*CSS POUR PROJETS ET CONTACT*/
+
+
+.contact-container {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
 }
 
-.grid-projets {
+.contact-content {
+    display: flex;
+    gap: 4rem;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    align-items: flex-start;
+}
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    color: var(--violet-fonce);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: var(--gris-fonce);
+    margin-bottom: 1rem;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--violet-doux);
+}
+
+.social-apps {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-apps a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.btn-whatsapp { background-color: #25D366; }
+.btn-telegram { background-color: #0088cc; }
+
+.social-apps a:hover {
+    opacity: 0.8;
+}
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--gris-tres-fonce);
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid var(--gris-clair);
+    border-radius: 5px;
+    font-family: inherit;
+    background-color: var(--gris-tres-clair);
+}
+
+.btn-submit {
+    background-color: var(--violet-doux);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--violet-fonce);
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        padding: 2rem;
+    }
+}
+/* --- Page Projet : Layout --- */
+.projets-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Realisation h2 {
+    margin-bottom: 1rem;
+}
+
+/* Grille de projets */
+.article-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
     margin-top: 3rem;
 }
 
+/* --- Style de la Carte --- */
 .card {
-    background-color: white;
-    border-radius: 15px;
+    background: #fff;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
     transition: transform 0.3s ease;
 }
 
@@ -238,171 +361,195 @@ footer a:hover {
     transform: translateY(-8px);
 }
 
-.card img {
+.card-image img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-bottom: 4px solid var(--violet-doux); 
 }
-
 .card-content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .card-content h3 {
-    color: var(--violet-doux);
-    margin-bottom: 0.5rem;
+    color: var(--violet-fonce);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
 }
 
 .card-content p {
     color: var(--gris-fonce);
     font-size: 0.95rem;
-    margin-bottom: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
+/* --- Tags (Badges) --- */
 .tags {
-    margin-bottom: 1rem;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.tags span {
-    display: inline-block;
-    background-color: var(--gris-clair);
-    color: var(--gris-tres-fonce);
-    padding: 5px 10px;
+.tags li {
+    background: #f0efff; /* Violet très clair */
+    color: var(--violet-doux);
+    padding: 4px 12px;
     border-radius: 20px;
-    font-size: 0.8rem;
-    margin-right: 5px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    list-style: none;
+    margin-left: 0;
 }
 
-.card-links {
+/* --- Footer de la carte --- */
+.card-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gris-clair);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid var(--gris-clair);
-    padding-top: 1rem;
 }
 
-.card-links a {
+.card-footer a, .card-footer .status {
     text-decoration: none;
-    color: var(--gris-tres-fonce);
-    font-size: 0.9rem;
+    color: #444;
+    font-size: 0.85rem;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.card-links a:hover {
+.card-footer a:hover {
     color: var(--violet-doux);
 }
 
-.soon {
-    font-size: 0.9rem;
-    color: var(--gris-fonce);
+.card-footer i {
+    font-size: 1rem;
 }
-/* --- Styles pour la page Contact --- */
 
-.contact-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding: 20px;
-    max-width: 900px;
+/*CSS POUR PASSION*/
+
+/* --- CONFIGURATION DE LA SECTION --- */
+.passions-grid {
+    padding: 4rem 2rem;
+    max-width: 1200px;
     margin: 0 auto;
-    font-family: 'Roboto', sans-serif;
 }
 
-.contact-form-container, .contact-info {
-    flex: 1;
-    min-width: 300px;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Style du titre H1 pour qu'il soit centré */
-h1 {
+/* --- EN-TÊTE DE SECTION --- */
+.section-header {
     text-align: center;
-    margin-bottom: 40px;
-    color: #333;
+    margin-bottom: 60px;
 }
 
-/* Formulaire */
-.form-group {
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #6d816d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-header .quote {
+    font-style: italic;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* --- STRUCTURE DES ARTICLES --- */
+.passion-item {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Espace entre l'image et le texte */
+    margin-bottom: 80px;
+}
+
+/* Inversion pour le deuxième bloc */
+.passion-item.reverse {
+    flex-direction: row-reverse; 
+}
+
+
+.passion-image {
+    flex: 1;
+    overflow: hidden;
+    background-color: #E3F2FD; /* Light blue background */
+    background-position: left;
+}
+
+.passion-item.reverse .passion-image {
+    background-position: right;
+}
+
+.passion-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover; /* L'image remplit le cadre sans se déformer */
+    display: block;
+    height: auto; 
+    object-position: top center;
+    object-fit: cover;
+    max-height: 85%;
+    clip-path: inset(0% 0% 15% 0%);   
+    /* Pour éviter que cela ne laisse un vide blanc en dessous */
+    margin-bottom: -20%; 
+}
+
+.passion-text {
+    flex: 1;
+}
+
+.passion-text h3 {
+    font-family: 'roboto', sans-serif;
+    font-size: 2rem;
+    color: #333;
     margin-bottom: 20px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
+.passion-text p {
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
 }
 
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box; /* Important pour que le padding n'agrandisse pas l'input */
-}
-
-.submit-btn {
-    width: 100%;
-    background-color: var(--violet-doux); /* Couleur sobre pour s'accorder au portfolio */
+/* --- BOUTON GRIS CLAIR --- */
+.btn-grey {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--violet-doux); /* Gris clair */
     color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
-}
-
-.submit-btn:hover {
-    background-color: #555;
-}
-
-/* Liens directs (WhatsApp/Instagram) */
-.contact-info h3 {
-    margin-top: 0;
-    color: #333;
-}
-
-.link-item {
-    display: flex;
-    align-items: center;
     text-decoration: none;
-    color: #333;
-    background: #f4f4f4;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 15px;
-    transition: transform 0.2s, background 0.2s;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border-radius: 60px;
 }
 
-.link-item:hover {
-    transform: scale(1.02);
-    background: #ececec;
+.btn-grey:hover {
+    background-color: #d0d0d0; /* Un peu plus sombre au survol */
+    color: white;
+    background-color: var(--violet-fonce);
+    transform: translateY(-3px);
 }
 
-.link-item .icon {
-    font-size: 24px;
-    margin-right: 15px;
-}
-
-.whatsapp:hover {
-    border-left: 4px solid #25D366;
-}
-
-.instagram:hover {
-    border-left: 4px solid #E1306C;
-}
-
-/* Adaptation pour les petits écrans */
-@media (max-width: 768px) {
-    .contact-wrapper {
-        flex-direction: column;
+/* --- RESPONSIVE --- */
+@media (max-width: 850px) {
+    .passion-item, .passion-item.reverse {
+        flex-direction: column; /* On empile sur mobile */
+        text-align: center;
     }
-}
-.b{
-    color: #534EDD;
-}
-.a{
-    position: relative;
-    color:var(--violet-doux)
-    
-}
+
+/* PAGE DIVERTISSEMENT */
+

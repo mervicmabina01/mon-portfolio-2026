@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
 </head>
 <body>
     <!--Voici la partie header en HTML-->
@@ -20,20 +23,69 @@
                 <li><a href="index.html" >Accueil</a></li>
                 <li><a href="projets.html">Projet</a></li> 
                 <li><a href="passions.html"class="active">Passion</a></li> 
-                <li><a href="divertissement.html">Divertissemnt</a></li>
+                <li><a href="divertissement.html">Divertissement</a></li>
                 <li><a href="contact.html">Contact</a></li>     
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Voici mes Passions</h1>
+        <section class="passions-grid">
+    <div class="container">
+        <h2>Mes passions</h2>
+        <article class="passion-item">
+            <div class="passion-image">
+                <img src="image/Tony Robbins.jpg" alt="Tony Robbins">
+            </div>
+            <div class="passion-text">
+                <h3>Etre un magnus conférencier</h3>
+                <p>« La parole a le pouvoir de briser des chaînes et de bâtir des empires intérieurs.
+                     En tant que conférencier, mon objectif n'est pas seulement de parler, mais de provoquer un déclic. 
+                     Être un "Magnus" conférencier, c'est porter une voix qui résonne au-delà des mots pour toucher l'âme, 
+                    bousculer les certitudes et insuffler l'énergie nécessaire à ceux qui n'osent plus rêver grand. »
+                </p>
+                <a href="#" class="btn-grey">En savoir plus</a>
+            </div>
+        </article>
+
+        <article class="passion-item reverse">
+            <div class="passion-image">
+                <img src="image/nick1.jpg" alt="nick1">
+            </div>
+            <div class="passion-text">
+                <h3>Redonner espoir à des vies</h3>
+                <p>« Je suis convaincu que nos circonstances de naissance ne définissent jamais la hauteur de notre destinée. 
+                    Mon message est simple : peu importe d'où vous venez ou les limites que l'on a tenté de vous imposer, 
+                    vous possédez en vous la capacité de devenir une icône. Redonner espoir, 
+                    c'est transformer chaque cicatrice en une force et prouver au monde que la résilience est le chemin le plus court vers la grandeur. »
+                </p>
+                <a href="#" class="btn-grey">En savoir plus</a>
+            </div>
+        </article>
+
+        <article class="passion-item">
+            <div class="passion-image">
+                <img src="image/warren.jpg" alt="xarren">
+            </div>
+            <div class="passion-text">
+                <h3>Etre un exemple générationel</h3>
+                <p>« Je ne travaille pas seulement pour aujourd'hui, mais pour l'héritage que je laisserai demain. 
+                    Être un exemple générationnel signifie incarner des valeurs d'intégrité, 
+                    de persévérance et de leadership pour la jeunesse de Lubumbashi et d'ailleurs.
+                     Mon ambition est de tracer un sillon que d'autres pourront suivre, 
+                    afin que la prochaine génération sache qu'aucun sommet n'est inatteignable pour celui qui refuse d'abandonner. »
+                </p>
+                <a href="#" class="btn-grey">En savoir plus</a>
+            </div>
+        </article>
+    </div>
+</section>
     </main>
     <footer>
         <p>@ 2026 Mervic. Tous droits réservés</p>
         <div>
-            <img src="image/Linkdlin.png" alt="Linkdlin" width="30">
-            <img src="image/Git.png" alt="Git" width="30" >
-            <img src="image/Twiter.png" alt="Twiter" width="30">
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
         </div>
     </footer>
 </body>

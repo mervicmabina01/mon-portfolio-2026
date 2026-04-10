@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
@@ -20,61 +22,51 @@
                 <li><a href="index.html" >Accueil</a></li>
                 <li><a href="projets.html">Projet</a></li> 
                 <li><a href="passions.html">Passion</a></li> 
-                <li><a href="divertissement.html">Divertissemnt</a></li>
+                <li><a href="divertissement.html">Divertissement</a></li>
                 <li><a href="contact.html"class="active">Contact</a></li>     
             </ul>
         </nav>
     </header>
     <main>
-        <main>
-    <h1 class="b">Contactez-nous</h1>
+    <section class="contact-container">
+        <h2>Contactez-nous</h2>
+        
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Mes coordonnées</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Basé à : <strong>Lubumbashi</strong></p>
+                <p><i class="fa-solid fa-phone"></i> Téléphone : <strong>+243 89 37 26 039</strong></p>
+                
+                <div class="social-apps">
+                    <a href="https://wa.me/243893726039" target="_blank" class="btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://t.me/+243893726039" target="_blank" class="btn-telegram">
+                        <i class="fa-brands fa-telegram"></i> Telegram
+                    </a>
+                </div>
+            </div>
 
-    <div class="contact-wrapper">
-        <section class="contact-form-container">
             <form action="#" method="POST" class="contact-form">
                 <div class="form-group">
-                    <label for="nom">Nom</label>
+                    <label for="nom">Nom complet</label>
                     <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
                 </div>
                 <div class="form-group">
-                    <label for="telephone">Téléphone</label>
-                    <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone" required>
+                    <label for="tel">Téléphone</label>
+                    <input type="tel" id="tel" name="tel" placeholder="Votre numéro de téléphone" required>
                 </div>
-                <button type="submit" class="submit-btn">Envoyer le message</button>
+                <button type="submit" class="btn-submit">Envoyer</button>
             </form>
-        </section>
-
-        <section class="contact-info">
-            <h3>Nos coordonnées</h3>
-            <p>📍 Basé à <strong>Lubumbashi</strong>, RDC</p>
-            
-            <div class="direct-links">
-                <a href="https://wa.me/243999969654" target="_blank" class="link-item whatsapp">
-                    <span class="icon">💬</span>
-                    <div>
-                        <strong>WhatsApp & Appel</strong><br>
-                        +243 999 969 654
-                    </div>
-                </a>
-
-                <a href="https://www.instagram.com/" target="_blank" class="link-item instagram">
-                    <span class="icon">📸</span>
-                    <div>
-                        <strong>Instagram</strong><br>
-                        Suivez-nous sur Instagram
-                    </div>
-                </a>
-            </div>
-        </section>
-    </div>
-</main>
+        </div>
+    </section>
     </main>
     <footer>
         <p>@ 2026 Mervic. Tous droits réservés</p>
         <div>
-            <img src="image/Linkdlin.png" alt="Linkdlin" width="30">
-            <img src="image/Git.png" alt="Git" width="30" >
-            <img src="image/Twiter.png" alt="Twiter" width="30">
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
         </div>
     </footer>
 </body>
